@@ -73,6 +73,13 @@
       a:hover{
           text-decoration: none;
       }
+      .nav-item{
+          color: white;
+          margin: 5px 10px;
+      }
+      .elmodal{
+          cursor: pointer;
+      }
       .icon-facebook2:hover{
           color:royalblue;
       }
@@ -85,7 +92,44 @@
       .icon-mail4:hover{
           color: #dd4b39;
       }
-      
+      @font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?6d03da');
+  src:  url('fonts/icomoon.eot?6d03da#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6d03da') format('truetype'),
+    url('fonts/icomoon.woff?6d03da') format('woff'),
+    url('fonts/icomoon.svg?6d03da#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail4:before {
+  content: "\ea86";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
     </style>
   </head>
   <body>
@@ -106,16 +150,16 @@
                             
                             <ul class="nav justify-content-center">
                                 <li class="nav-item active">
-                                  <a class="nav-link" href="#">HOME</a>
+                                  <a class="btn btn-primary" href="#">HOME</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" href="https://photos.app.goo.gl/nWMzbnxvy5MFjRUd7" target="_blank">GALERIA</a>
+                                  <a class="btn btn-primary" href="https://photos.app.goo.gl/nWMzbnxvy5MFjRUd7" target="_blank">GALERIA</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">NOSOTROS</a>
+                                  <a  class="btn btn-primary" role="button" data-toggle="modal" data-target="#exampleModalScrollable">NOSOTROS</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" href="#" tabindex="-1" >CONTACTO</a>
+                                  <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#exampleModalScrollable2"  >CONTACTO</a>
                                 </li>
                               </ul>
                             </div>
@@ -207,6 +251,35 @@
               </div>
             </div>
           </div>
+          <div class="modal fade " id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalScrollableTitle">Nosotros</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                            <form>
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Email address</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Cuentanos tu inquietud!</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 </body>
   
 </html>
